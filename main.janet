@@ -1,10 +1,12 @@
 (import markable)
 (import filesystem)
 
+
 (defn- read-template
   "reads the contents of a template"
   [filename]
   (filesystem/read-file (string "src/template/" filename ".html")))
+
 
 (defn- parse-template
   "parse template with frontmatter"
@@ -15,6 +17,7 @@
               (get el 1) acc))
           template
           (pairs frontmatter)))
+
 
 (defn- parse-note
   "parse note from markdown to html with templates"
@@ -34,11 +37,13 @@
                    (parse-template frontmatter))]
     (filesystem/write-file file (string header body footer))))
 
+
 (defn- handle-notes
   "handle all the notes in the source directory"
   [source target]
   (let [notes (filesystem/list-all-files source)]
     (map (fn [note] (parse-note note source target)) notes)))
+
 
 (defn main
   "simple static site generator"

@@ -4,9 +4,9 @@
   :dependencies ["https://github.com/pyrmont/markable"
                  "https://github.com/jeannekamikaze/janet-filesystem.git"]
   :author "Henricus Louwhoff"
-  :license ""
-  :url "https://henricuslouwhoff.com"
-  :repo "https://sr.ht/~hlo/eden")
+  :license "MIT"
+  :url "https://henricus.dev"
+  :repo "https://github.com/hl/eden")
 
 (declare-executable
   :name "eden"

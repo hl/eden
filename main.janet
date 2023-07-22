@@ -48,7 +48,7 @@
 (defn main
   "simple static site generator"
   [& args]
-  (let [source (get args 1 "notes") target (get args 2 "dist")]
+  (let [source (get args 1 "notes") target (get args 2 "docs")]
     (filesystem/remove-directories target)
     (let [notes (handle-notes source target)]
       (print "processed " (length notes) " notes (source: '" source "' target: '" target "')"))))

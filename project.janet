@@ -10,4 +10,4 @@
 
 (declare-executable
   :name "eden"
-  :entry "main.janet")
+  :entry "src/main.janet")
